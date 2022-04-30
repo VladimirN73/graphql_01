@@ -15,8 +15,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\app.Module.Common\ax.Module.Common.csproj" />
-    <ProjectReference Include="..\app.Module.Data\ax.Module.Data.csproj" />
+    <ProjectReference Include="..\ax.Module.Common\ax.Module.Common.csproj" />
+    <ProjectReference Include="..\ax.Module.Data\ax.Module.Data.csproj" />
   </ItemGroup>
 
 
