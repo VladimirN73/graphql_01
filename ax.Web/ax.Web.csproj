@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="GraphQL" Version="5.1.1" />
+    <PackageReference Include="GraphQL.Server.Transports.AspNetCore" Version="6.0.0" />
+    <PackageReference Include="GraphQL.Server.Ui.Playground" Version="6.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\app.Module.Common\ax.Module.Common.csproj" />
+    <ProjectReference Include="..\app.Module.Data\ax.Module.Data.csproj" />
+    <ProjectReference Include="..\app.Module.Graphql\ax.Module.Graphql.csproj" />
+  </ItemGroup>
+
+</Project>

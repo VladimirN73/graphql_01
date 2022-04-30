@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="GraphQL" Version="5.1.1" />
+    <PackageReference Include="GraphQL.MicrosoftDI" Version="5.1.1" />
+    <PackageReference Include="GraphQL.Server.Transports.AspNetCore" Version="6.0.0" />
+    <PackageReference Include="GraphQL.Server.Ui.Playground" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\app.Module.Common\ax.Module.Common.csproj" />
+    <ProjectReference Include="..\app.Module.Data\ax.Module.Data.csproj" />
+  </ItemGroup>
+
+
+</Project>
