@@ -3,19 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "app.Web", "app.Web\app.Web.csproj", "{EB6253DD-7A8A-4C9C-8F1A-B4F808F6497B}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A3A42B86-8582-4BB2-8DB7-E916E119E342}"
 	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
 		readme.txt = readme.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "app.Module.Graphql", "app.Module.Graphql\app.Module.Graphql.csproj", "{55E7D555-9CBB-4C9C-B046-A8944204BC27}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C3A2660B-B64D-4347-9B69-3769DFDEAC78}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "app.Module.Common", "app.Module.Common\app.Module.Common.csproj", "{D791F2A2-45BD-4A80-9BBF-33FA455C1119}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ax.Module.Common", "ax.Module.Common\ax.Module.Common.csproj", "{D791F2A2-45BD-4A80-9BBF-33FA455C1119}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ax.Module.Data", "ax.Module.Data\ax.Module.Data.csproj", "{A78975AA-DB22-4619-A473-123571270752}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ax.Module.Graphql", "ax.Module.Graphql\ax.Module.Graphql.csproj", "{55E7D555-9CBB-4C9C-B046-A8944204BC27}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ax.Web", "ax.Web\ax.Web.csproj", "{EB6253DD-7A8A-4C9C-8F1A-B4F808F6497B}"
+EndProject
+
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,6 +38,10 @@ Global
 		{D791F2A2-45BD-4A80-9BBF-33FA455C1119}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D791F2A2-45BD-4A80-9BBF-33FA455C1119}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D791F2A2-45BD-4A80-9BBF-33FA455C1119}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A78975AA-DB22-4619-A473-123571270752}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A78975AA-DB22-4619-A473-123571270752}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A78975AA-DB22-4619-A473-123571270752}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A78975AA-DB22-4619-A473-123571270752}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -41,6 +49,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{55E7D555-9CBB-4C9C-B046-A8944204BC27} = {C3A2660B-B64D-4347-9B69-3769DFDEAC78}
 		{D791F2A2-45BD-4A80-9BBF-33FA455C1119} = {C3A2660B-B64D-4347-9B69-3769DFDEAC78}
+		{A78975AA-DB22-4619-A473-123571270752} = {C3A2660B-B64D-4347-9B69-3769DFDEAC78}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5F4211F4-54F3-4BD1-B77B-A4C0B31B9919}

@@ -1,4 +1,4 @@
-namespace app.Web
+namespace ax.Web
 {
     public class WeatherForecast
     {

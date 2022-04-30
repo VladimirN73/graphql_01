@@ -1,8 +1,15 @@
-﻿using GraphQL.Types;
+﻿using ax.Module.Common;
+using GraphQL.Types;
 
-namespace app.Module.Graphql.Types;
+namespace ax.Module.Graphql.Types;
 
-public class ProductType: ObjectGraphType
+public sealed class ProductType: ObjectGraphType<Product>
 {
+    public ProductType()
+    {
+        Field(t => t.Id);
+        Field(t => t.Name);
+        Field(t => t.Description);
+    }
 }
 

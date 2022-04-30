@@ -4,6 +4,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 ConfigureServices(builder.Services);
 
+var list = builder.Services.Select(x => x.ServiceType.ToString()).OrderBy(x=>x).ToList();
+
 var app = builder.Build();
 
 ConfigureApp();
@@ -16,6 +18,9 @@ void ConfigureServices(IServiceCollection services)
     services.AddControllers();
     services.AddEndpointsApiExplorer();
     services.AddSwaggerGen();
+
+    ax.Module.Data.StartupServices.ConfigureServices(services);
+    ax.Module.Graphql.StartupServices.ConfigureServices(services);
 }
 
 void ConfigureApp()
@@ -29,53 +34,8 @@ void ConfigureApp()
     app.UseHttpsRedirection();
 
     app.MapControllers();
+
+    ax.Module.Graphql.StartupServices.ConfigureApp(app);
 }
-
-//namespace app.Web;
-
-//    public class Program
-//    {
-//        public static void Main(string[] args)
-//        {
-//            var temp = BuildWebHost(args).Build();
-//            temp.Run();
-
-//            var builder = WebApplication.CreateBuilder(args);
-
-//            var app = builder.Build();
-
-//            // Configure the HTTP request pipeline.
-//            if (app.Environment.IsDevelopment())
-//            {
-//                app.UseSwagger();
-//                app.UseSwaggerUI();
-//            }
-
-//            app.UseHttpsRedirection();
-
-//            app.UseAuthorization();
-
-//            app.MapControllers();
-
-//            app.Run();
-//    }
-
-//        public static IWebHostBuilder BuildWebHost(string[] args) =>
-//            WebApplication.CreateBuilder(args)
-//                .WebHost
-//                .UseStartup<Startup>();
-
-//    }
-
-
-
-
-
-//// Add services to the container.
-
-////builder.Services.AddControllers();
-////// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-////builder.Services.AddEndpointsApiExplorer();
-////builder.Services.AddSwaggerGen();
 
 
