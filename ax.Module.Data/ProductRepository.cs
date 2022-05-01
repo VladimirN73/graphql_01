@@ -21,5 +21,9 @@ public class ProductRepository
         return ret;
     }
 
+    public Product? GetById(long id)
+    {
+        return GetAll().FirstOrDefault(x => x.Id == id);
+    }
 }
 

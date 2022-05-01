@@ -3,6 +3,7 @@ graphql_01/readme.txt
 
 History (newest on top)
 01.05.22
+add query 'product', query: {product(id: 1){name}}
 it works. navigate to ui/playground and ask for {products{name}} 
 30.04.22
 check https://christian-schou.dk/how-to-implement-graphql-in-asp-net-core/

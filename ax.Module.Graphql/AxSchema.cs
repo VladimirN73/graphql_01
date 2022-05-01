@@ -1,6 +1,8 @@
 ﻿using ax.Module.Data;
 using ax.Module.Graphql.Types;
+using GraphQL;
 using GraphQL.Types;
+using GraphQL.Validation;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace ax.Module.Graphql;
@@ -29,6 +31,16 @@ public class ProductQuery : ObjectGraphType
         Field<ListGraphType<ProductType>>(
             "productsx",
             resolve: _ => productRepository.GetAll());
+
+
+        Field<ProductType>(
+            "product",
+            arguments: new QueryArguments(new QueryArgument<NonNullGraphType<IdGraphType>>{Name="id"}),
+            resolve: _ =>
+            {
+                var id = _.GetArgument<int>("id");
+                return productRepository.GetById(id);
+            });
     }
 }
 
