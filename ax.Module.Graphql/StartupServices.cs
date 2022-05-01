@@ -25,14 +25,13 @@ public static class StartupServices
             .AddGraphTypes(typeof(AxSchema).Assembly)
             .AddHttpMiddleware<AxSchema,  GraphQLHttpMiddleware<AxSchema>>()
             .AddSystemTextJson()
+            .AddErrorInfoProvider(opt => opt.ExposeExceptionStackTrace = true)
         );
     }
 
     public static void ConfigureApp(WebApplication appx)
     {
         appx.UseGraphQL<AxSchema>(); // default url: /graphql
-        //appx.UseGraphQL<AxSchema, GraphQLHttpMiddleware<AxSchema>>(); // default url: /graphql
         appx.UseGraphQLPlayground(new PlaygroundOptions()); //default url: /ui/playground
-        appx.UseMiddleware<GraphQLMiddleware>();
     }
 }

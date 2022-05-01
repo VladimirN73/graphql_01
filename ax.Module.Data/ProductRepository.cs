@@ -4,15 +4,22 @@ namespace ax.Module.Data;
 
 public class ProductRepository
 {
-    public Task<List<Product>> GetAll()
+    public Task<List<Product>> GetAllAsync()
+    {
+        var ret = GetAll();
+        return Task.FromResult(ret);
+    }
+
+    public List<Product> GetAll()
     {
         var ret = new List<Product>
         {
-            new Product{Name = "A"},
-            new Product{Name = "B"},
-            new Product{Name = "C"},
+            new Product {Id = 1, Name = "A", Description = ""},
+            new Product {Id = 2, Name = "B", Description = ""},
+            new Product {Id = 3, Name = "C", Description = ""},
         };
-        return Task.FromResult(ret);
+        return ret;
     }
+
 }
 
